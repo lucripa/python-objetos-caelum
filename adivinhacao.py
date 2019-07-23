@@ -1,8 +1,10 @@
+from random import randint
+
 print('***********************')
 print('* Jogo da adivinhação *')
 print('***********************')
 
-numero_secreto = 42
+numero_secreto = randint(0, 10)
 total_de_tentativas = 3
 #rodada = 1
 
