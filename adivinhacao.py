@@ -3,10 +3,12 @@ print('* Jogo da adivinhação *')
 print('***********************')
 
 numero_secreto = 42
-numero_de_tentativas = 3
-nao_acertou = True
+total_de_tentativas = 3
+#rodada = 1
 
-while(numero_de_tentativas > 0 and nao_acertou):
+#while( rodada <= total_de_tentativas):
+for rodada in range(1, total_de_tentativas + 1):
+    print('Tentativa {} de {}'.format(rodada, total_de_tentativas))
     chute = int(input('Digite um número inteiro: '))
     print('Você digitou: ', chute)
 
@@ -16,12 +18,12 @@ while(numero_de_tentativas > 0 and nao_acertou):
 
     if (acertou):
         print('Você acertou, PARABENS!')
-        nao_acertou = False
+        break
     elif (maior):
         print('numero errado, vc informou um numero MAIOR que o numero secreto.')
     elif (menor):
         print('numero errado, vc informou um numero MENOR que o numero secreto.')
-    
-    numero_de_tentativas -= 1
+
+    #rodada += 1
 
 print('Fim de jogo.')
