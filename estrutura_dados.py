@@ -71,7 +71,7 @@ cidade_usuario = str(input('Informe sua cidade: '))
 dict_usuario = {'nome': nome_usuario, 'idade': idade_usuario, 'cidade': [cidade_usuario]}
 
 for chave, valor in dict_usuario.items():
-    print('{}: {}'.format(chave, valor))'''
+    print('{}: {}'.format(chave, valor))
 
 def velocidade_media(distancia, tempo):
     pass
@@ -82,3 +82,41 @@ velocidade_media(100, 20)
 velocidade_media(150, 22)
 velocidade_media(200, 30)
 velocidade_media(50, 3)
+
+
+#args
+#kwargs
+
+def teste(arg1, *args):
+        print('1o arg', arg1)
+        for argumento in args:
+                print('outro arg', argumento)
+
+def teste2(**kwargs):
+        for chave, valor in kwargs.items():
+                print('{} - {}'.format(chave,valor))
+
+def teste3(arg, *args, **kwargs):
+        print('1o arg', arg)
+
+        for argumento in args:
+                print('outros arg: ',argumento)
+        
+        for chave, valor in kwargs.items():
+                print('{}: {}'.format(chave, valor))
+
+parametro = 'primeiro'
+dicionario = {'um': 1, 'dois': 2}
+
+'''
+
+def teste_args_kwargs(arg1, arg2, arg3):
+        print('arg1: ', arg1)
+        print('arg2: ', arg2)
+        print('arg3: ', arg3)
+
+args = ('um', 2, 3)
+teste_args_kwargs(*args)
+
+kwargs = {'arg3': 3, 'arg2': 2, 'arg1': 1}
+teste_args_kwargs(**kwargs)
